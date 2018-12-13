@@ -1,0 +1,37 @@
+h3 {
+	font-size: 30px;
+}
+
+
+.list2 {
+	vertical-align: center;
+	list-style-type: none;
+
+}
+
+.list2 li {
+	display: inline-block;
+	padding: 50px;
+	min-width: 25%;
+	text-align: center;
+	
+}
+
+
+
+.button2 {
+  background-color: rgba(248,217,217,1);
+  cursor: pointer;
+  width: 90%;
+  height: 50px;
+
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-top: 15px; 
+  border-radius: 5px;
+    box-shadow: 0px 6px 0px rgba(248,217,217,1), 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+
+}

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import firebase from './firebase.js';
 import App from './App.js';
-import InputForm from './inputForm.js';
+/*import InputForm from './inputForm.js';*/
+import './displayGrid.css';
+
 
 export default class DisplayGrid extends Component{
 
@@ -34,19 +36,20 @@ export default class DisplayGrid extends Component{
 	removeItem(itemId){
 		const productRef = firebase.database().ref(`/items/${itemId}`);
 		productRef.remove();
+		alert("Item Purchased!");
 	}
 
 	render(){
 		return(
 		  <div className="wrapper">
-		    <ul>
+		    <ul className='list2'>
 		      {this.state.productArray.map((item) => {
 		        return (
 		          <li key={item.id}>
 		            <h3>{item.product}</h3>
 		            <p>{item.description}</p>
 		            <p>{item.price}</p>
-		           	<button onClick={() => this.removeItem(item.id)}>Purchase Item</button>
+		           	<button className='button2' onClick={() => this.removeItem(item.id)}>Purchase Item</button>
 		          </li>
 		        )
 		      })}

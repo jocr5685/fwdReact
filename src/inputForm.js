@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from './firebase.js';
 import App from './App.js';
 import DisplayGrid from './displayGrid.js';
+import './inputForm.css';
 
 export default class InputForm extends Component{
 
@@ -36,6 +37,7 @@ export default class InputForm extends Component{
 			description:'',
 			price:''
 		});
+		alert("Item Added!");
 	}
 
 
@@ -49,11 +51,11 @@ export default class InputForm extends Component{
 
 				<div className ='add'>
 					<form onSubmit={this.pushData}>
-					<ul>
+					<ul className='firstlist'>
 						<li><input type ="text" name="product" onChange={this.userInput} value={this.state.product} placeholder= "Product Name" /></li>
 						<li><input type ="text" name="description" onChange={this.userInput} value={this.state.description} placeholder= "Product Description" /></li>
 						<li><input type ="text" name="price" onChange={this.userInput} value={this.state.price} placeholder= "Price (USD)" /></li>
-						<button> Add Product </button>
+						<button className='button1'> Add Product </button>
 					</ul>
 					</form>
 				</div>
